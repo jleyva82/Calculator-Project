@@ -18,7 +18,7 @@ def performMath():                                #creating our math function
 
 
     if equation == 'quit':                        #have an exit strategy
-        print("Goodbye Human")                    #notify user of exit
+        print("Goodbye. Thanks for using Magical Calculator")                    #notify user of exit
         run = False                               #change global value to impact while loop
     else:                                                       #unless user has input 'quit'
         equation = re.sub('[a-zA-Z,():;" "]', '', equation)     #must elimate dangerous characters for eval function, this is why we imported regex
