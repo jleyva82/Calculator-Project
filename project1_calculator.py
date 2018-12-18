@@ -1,7 +1,8 @@
 import re                                         #import external library for regex to safe keep the evalfunction by removing extra characters
 
-print('Magical Calculator')                       #title for UI
-print("Type 'quit' to exit\n")                    #legent to quit for UI
+print('Magical Calculator')                   #title for UI
+print('Type "quit" to exit')                    #legent to quit for UI
+print('Type "clear" to reset\n')
 
 previous = 0                                      #starting ans is 0
 run = True                                        #starting conditon for our while loop
@@ -18,8 +19,12 @@ def performMath():                                #creating our math function
 
 
     if equation == 'quit':                        #have an exit strategy
-        print("Goodbye. Thanks for using Magical Calculator")                    #notify user of exit
+        print("Goodbye. Thank you for using Magical Calculator.")                    #notify user of exit
         run = False                               #change global value to impact while loop
+
+    elif equation == 'clear':                     #insert clear UI
+        previous = 0                              #reset previous value to 0
+
     else:                                                       #unless user has input 'quit'
         equation = re.sub('[a-zA-Z,():;" "]', '', equation)     #must elimate dangerous characters for eval function, this is why we imported regex
 
