@@ -1,6 +1,6 @@
 import re                                         #import external library for regex to safe keep the evalfunction by removing extra characters
 
-print('Magical Calculator')                   #title for UI
+print('Magical Calculator')                       #title for UI
 print("Type 'quit' to exit\n")                    #legent to quit for UI
 
 previous = 0                                      #starting ans is 0
